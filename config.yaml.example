@@ -4,6 +4,6 @@ chains:
   evmos_9001-2:
     endpoint: https://evmos-api.polkachu.com
 
-db_path: "/opt/upgrades.db"
+db_path: "/opt/data/upgrades.db"
 slack:
   webhook: "<slack webhook url here>"

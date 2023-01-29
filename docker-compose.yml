@@ -1,9 +1,12 @@
 version: "3.9"
 services:
   watcher:
-    build: .
+    image: ghcr.io/skip-mev/governor:latest
     ports:
       - "8000:8000"
     volumes:
-      - "./upgrades.db:/opt/upgrades.db"
+      - "data:/opt/data/"
       - "./config.yaml:/opt/config.yaml"
+
+volumes:
+  data:
