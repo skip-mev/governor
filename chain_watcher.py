@@ -107,7 +107,7 @@ class ChainWatcher:
                     "type": "header",
                     "text": {
                         "type": "plain_text",
-                        "text": "New chain upgrade in cerberus-1",
+                        "text": f"New chain upgrade in {self.chain_id}",
                         "emoji": False,
                     },
                 },
