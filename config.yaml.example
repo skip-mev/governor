@@ -1,0 +1,9 @@
+chains:
+  cerberus-1:
+    endpoint: https://cerberus-api.polkachu.com
+  evmos_9001-2:
+    endpoint: https://evmos-api.polkachu.com
+
+db_path: "/opt/upgrades.db"
+slack:
+  webhook: "<slack webhook url here>"
