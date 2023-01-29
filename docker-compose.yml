@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  watcher:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./upgrades.db:/opt/upgrades.db"
+      - "./config.yaml:/opt/config.yaml"
