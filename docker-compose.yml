@@ -1,12 +1,14 @@
 version: "3.9"
 services:
   watcher:
-    image: ghcr.io/skip-mev/governor:latest
+    build: .
     ports:
       - "8000:8000"
     volumes:
       - "data:/opt/data/"
       - "./config.yaml:/opt/config.yaml"
+    environment:
+      - "PROMETHEUS_MULTIPROC_DIR=/tmp/upgrade_watcher_prom"
 
 volumes:
   data:
