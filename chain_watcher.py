@@ -39,8 +39,8 @@ class ChainWatcher:
 
     def monitor(self):
         self.db_conn = sqlite3.connect(self.config["db_path"])
-        self.last_checked_time = Gauge(f'last_checked', 'Last time an upgrade was fetched', ["chain_id"])
-        self.error_counter = Counter(f'errors', 'Errors encountered during an upgrade', ["chain_id", "error"])
+        self.last_checked_time = Gauge(f'governor_last_checked', 'Last time an upgrade was fetched', ["chain_id"])
+        self.error_counter = Counter(f'governor_errors', 'Errors encountered during an upgrade', ["chain_id", "error"])
 
         logging.basicConfig(
             level=logging.DEBUG, format="%(asctime)s %(name)s %(levelname)s:%(message)s"
